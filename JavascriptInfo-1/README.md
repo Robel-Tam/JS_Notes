@@ -1,14 +1,13 @@
 # Title
 **Good place to look back at important JS concepts you might have forgotten.**
 
-Notes are taken from and follow the outline of a great JS book [Javascript.info](), but also includes important concepts and examples that might have been left out, below is a list of the referances used the most.
+Notes are taken from and follow the outline of a great JS referance [Javascript.info](javascript.info), but also includes good to know concepts and examples that might have been left out, below is a list of the referances used the most.
 
 ## Referances
- - [Javascript.info]()
- - [ecma script]()
- - [Javascript the definative guide]()
- - [Eloquent Javacript *a modern introduction to programming*]()
- - [Secrets of the Javascript ninja]()
+ - [Javascript.info](javascript.info)
+ - [ECMAScript specs](https://tc39.es/ecma262/multipage/)
+ - [Eloquent Javacript *a modern introduction to programming*](https://eloquentjavascript.net/)
+ - [Secrets of the Javascript ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition)
 
 ## Outline
 
@@ -20,7 +19,9 @@ Notes are taken from and follow the outline of a great JS book [Javascript.info]
 
 4. [Advanced working with functions](Advanced%20working%20with%20functions.md)
 
-5. [Object properties configuration]()
+5. [Object properties configuration](Object%20properties%20configuration.md)
 
-6. [Prototypes and Inheritance]()
+6. [Prototypes and Inheritance](Prototypes%20and%20Inheritance.md)
 
+## Contributing
+Feel free to submit a pull request, with anything from small fixes to new sections as this repo likely contains many typos, unclear abbreviations and so on.
