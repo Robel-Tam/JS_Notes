@@ -1,6 +1,6 @@
 # The Basics 
 
-If we give a <code>src</code> attribute inside our &lt;script&gt; tag, and at the same time define some code inside the &lt;script&gt; tags, the script inside will get ignored
+If we give a ``src`` attribute inside our &lt;script&gt; tag, and at the same time define some code inside the &lt;script&gt; tags, the script inside will get ignored
 
 ```html
 <script src="smt.js">
