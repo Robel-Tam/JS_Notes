@@ -8,7 +8,7 @@ Notes for the most part are taken from and follow the outline of a great JS refe
  - [ECMAScript specs](https://tc39.es/ecma262/multipage/)
  - [Eloquent Javacript *a modern introduction to programming*](https://eloquentjavascript.net/)
  - [Secrets of the Javascript ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition)
-
+<!---
 ## Outline
 
 1. [Code Quality](Code%20Quality.md)
@@ -22,6 +22,6 @@ Notes for the most part are taken from and follow the outline of a great JS refe
 5. [Object properties configuration](Object%20properties%20configuration.md)
 
 6. [Prototypes and Inheritance](Prototypes%20and%20Inheritance.md)
-
+-->
 ## Contributing
 Feel free to submit a pull request, with anything from small fixes to new sections as this repo likely contains many typos, unclear abbreviations and so on.
