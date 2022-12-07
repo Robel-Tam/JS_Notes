@@ -1,10 +1,10 @@
-# Title
+# JS Notes
 **Good place to look back at important JS concepts you might have forgotten.**
 
-Notes are taken from and follow the outline of a great JS referance [Javascript.info](javascript.info), but also includes good to know concepts and examples that might have been left out, below is a list of the referances used the most.
+Notes for the most part are taken from and follow the outline of a great JS referance [Javascript.info](https://javascript.info/), but also includes good to know concepts and examples that might have been left out, below is a list of the referances used the most.
 
-## Referances
- - [Javascript.info](javascript.info)
+## References
+ - [Javascript.info](https://javascript.info/)
  - [ECMAScript specs](https://tc39.es/ecma262/multipage/)
  - [Eloquent Javacript *a modern introduction to programming*](https://eloquentjavascript.net/)
  - [Secrets of the Javascript ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition)
