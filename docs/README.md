@@ -1,5 +1,5 @@
 # JS Notes
-**Good place to look back at important JS concepts you might have forgotten.**
+**A Good place to look back at important JS concepts you might have forgotten.**
 
 Notes for the most part are taken from and follow the outline of a great JS reference [Javascript.info](https://javascript.info/), but also include good to know concepts and examples that might have been left out, below is a list of the references used the most.
 
