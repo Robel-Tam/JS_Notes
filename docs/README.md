@@ -1,7 +1,7 @@
 # JS Notes
 **Good place to look back at important JS concepts you might have forgotten.**
 
-Notes for the most part are taken from and follow the outline of a great JS referance [Javascript.info](https://javascript.info/), but also includes good to know concepts and examples that might have been left out, below is a list of the referances used the most.
+Notes for the most part are taken from and follow the outline of a great JS reference [Javascript.info](https://javascript.info/), but also include good to know concepts and examples that might have been left out, below is a list of the referances used the most.
 
 ## References
  - [Javascript.info](https://javascript.info/)

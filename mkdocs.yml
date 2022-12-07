@@ -5,6 +5,10 @@ theme:
   favicon: assets/images/logo.ico
   icon:
     repo: fontawesome/brands/github
+  features:
+    - navigation.top
+    - navigation.expand
+   # - toc.integrate
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -20,5 +24,16 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 repo_url: https://github.com/Robel-Tam/Obsidian_Notes
-repo_name: Robel-Tam/
+repo_name: Robel-Tam/JS_Notes
 edit_uri: https://github.com/Robel-Tam/JS_Notes/edit/main/docs/
+nav:
+  - Home:  "README.md"
+  - "The Basics.md"
+  - "Code Quality.md"
+  - "Objects.md"
+  - "Data Types.md"
+  - "Advanced working with functions.md"
+  - "Object properties configuration.md"
+  - "Prototypes and Inheritance.md"
+  - Cheat-sheets:
+    - 'Array methods': "Array methods cheat-sheet.md"
