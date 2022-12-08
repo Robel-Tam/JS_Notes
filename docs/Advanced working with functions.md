@@ -26,7 +26,7 @@ function printList(list){  // recursive function for printing elements inside th
 printList(lList) // 123
 ```
 
-# Rest parameters
+## Rest parameters
 
 In JS it’s ok to pass more arguments to a function that it needs, the function will simply ignore it.
 
@@ -57,7 +57,7 @@ The downside of the arguments object is that it’s not an array, so we can’t 
 
 Arrow functions don’t have the **arguments** object, they will take it from an outer function if it exists
 
-# Spread operator 🌟
+## Spread operator 🌟
 
 The syntax for the rest operator (…arr) can also spread an iterable object in to a list of values.
 
@@ -79,11 +79,11 @@ arr2  = [ ...arr2, ...arr1 ]
 
 Unlike the Array.from() method, the spread operator only operates on iterables and not array-likes, so Array.from() is a more universal way to convert stuff into arrays
 
-# Closures
+## Closures
 
 Are functions that remember their outer variables and can access them. All JS functions are naturally closures.
 
-## Lexical Environment
+### Lexical Environment
 
 A lexical environment is a specification (internal / hidden ) object associated with every function call / block / script. i.e. every running function/ block / script have their own.
 
@@ -301,7 +301,7 @@ function greet(){
 greet() // undefined
 ```
 
-# The global object
+## The global object
 
 Provides variables and functions that are available anywhere. Mostly the ones that are built into the language or the environment. 
 
@@ -313,7 +313,7 @@ In-browser unless we’re using modules, variables declared with var and global 
 
 We can use the global object to test for support of modern language features
 
-# The function object
+## The function object
 
 Functions in JS are objects. So they have some usable properties of their own
 
@@ -382,7 +382,7 @@ c() // 40
 // In this case we can modify the counter
 ```
 
-## Named function expressions ( NFE )
+### Named function expressions ( NFE )
 
 NFE is when we give names to the function on the right side of the function in our functional expressions.
 
@@ -424,7 +424,7 @@ anotherFunc() // Error sayHi is not a function
 
 </aside>
 
-## new Function() syntax
+### new Function() syntax
 
 ```jsx
 let func = new Function ([arg1, arg2, ...argN], functionBody);
