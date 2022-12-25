@@ -248,7 +248,7 @@ function a(){ return };  // a() -> undefined
 function b(){}; // b() -> undefined
 ```
 
-Modal function - are functions that restricts user interaction i.e. pause the code execution until an action has been taken. eg. alert() 
+Modal function - are functions that restricts user interaction i.e. pause the code execution until an action has been taken. eg. alert()\
 
 <aside>
 	⚠️ <b>Function declaration VS Function expression:</b> 
