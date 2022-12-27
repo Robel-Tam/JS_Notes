@@ -28,7 +28,7 @@ printList(lList) // 123
 
 # Rest parameters
 
-In JS it’s ok to pass more arguments to a function that it need, the function will simply ignore it.
+In JS it’s ok to pass more arguments to a function that it needs, the function will simply ignore it.
 
 To store the passed arguments to an array we can use rest parameters ( …rest ). The rest parameter must come at the end if other parameters exist.
 
