@@ -23,8 +23,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-repo_url: https://github.com/Shifta-Robel/Obsidian_Notes
-repo_name: Robel-Tam/JS_Notes
+repo_url: https://github.com/Shifta-Robel/JS_Notes
+repo_name: Shifta-Robel/JS_Notes
 edit_uri: https://github.com/Shifta-Robel/JS_Notes/edit/main/docs/
 nav:
   - Home:  "README.md"
