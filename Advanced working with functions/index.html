@@ -1,0 +1,1186 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Data%20Types/">
+      
+      
+        <link rel="next" href="../Object%20properties%20configuration/">
+      
+      <link rel="icon" href="../assets/images/logo.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+    
+    
+      
+        <title>Advanced working with functions - JS Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced-working-with-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="JS Notes" class="md-header__button md-logo" aria-label="JS Notes" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JS Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced working with functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Shifta-Robel/JS_Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Shifta-Robel/JS_Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="JS Notes" class="md-nav__button md-logo" aria-label="JS Notes" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    JS Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Shifta-Robel/JS_Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Shifta-Robel/JS_Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The%20Basics/" class="md-nav__link">
+        The Basics
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Code%20Quality/" class="md-nav__link">
+        Code Quality
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Types/" class="md-nav__link">
+        Data Types
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Advanced working with functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Advanced working with functions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rest-parameters" class="md-nav__link">
+    Rest parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spread-operator" class="md-nav__link">
+    Spread operator 🌟
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closures" class="md-nav__link">
+    Closures
+  </a>
+  
+    <nav class="md-nav" aria-label="Closures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lexical-environment" class="md-nav__link">
+    Lexical Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-functions" class="md-nav__link">
+    Nested Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-old-var" class="md-nav__link">
+    The old var
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-global-object" class="md-nav__link">
+    The global object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-function-object" class="md-nav__link">
+    The function object
+  </a>
+  
+    <nav class="md-nav" aria-label="The function object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#named-function-expressions-nfe" class="md-nav__link">
+    Named function expressions ( NFE )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-function-syntax" class="md-nav__link">
+    new Function() syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-settimeout-setinterval" class="md-nav__link">
+    Scheduling : setTimeout &amp; setInterval
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling : setTimeout &amp; setInterval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive-settimeout" class="md-nav__link">
+    Recursive setTimeout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Object%20properties%20configuration/" class="md-nav__link">
+        Object properties configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prototypes%20and%20Inheritance/" class="md-nav__link">
+        Prototypal inheritance
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+          Cheat-sheets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cheat-sheets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Cheat-sheets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Array%20methods%20cheat-sheet/" class="md-nav__link">
+        Array methods
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rest-parameters" class="md-nav__link">
+    Rest parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spread-operator" class="md-nav__link">
+    Spread operator 🌟
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closures" class="md-nav__link">
+    Closures
+  </a>
+  
+    <nav class="md-nav" aria-label="Closures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lexical-environment" class="md-nav__link">
+    Lexical Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-functions" class="md-nav__link">
+    Nested Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-old-var" class="md-nav__link">
+    The old var
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-global-object" class="md-nav__link">
+    The global object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-function-object" class="md-nav__link">
+    The function object
+  </a>
+  
+    <nav class="md-nav" aria-label="The function object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#named-function-expressions-nfe" class="md-nav__link">
+    Named function expressions ( NFE )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-function-syntax" class="md-nav__link">
+    new Function() syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-settimeout-setinterval" class="md-nav__link">
+    Scheduling : setTimeout &amp; setInterval
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling : setTimeout &amp; setInterval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive-settimeout" class="md-nav__link">
+    Recursive setTimeout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="advanced-working-with-functions">Advanced working with functions</h1>
+<p>The number of times a recursive function calls itself is called a recursion depth.</p>
+<p>The maximum recursion depth is limited by engines. read about Tail call optimizations</p>
+<p>Recursive structures - Linked lists</p>
+<pre><code class="language-jsx">let lList = {  // a linked list
+    value: 1,
+    next:{
+        value: 2,
+        next:{
+            value: 3,
+            next: null
+        }
+    }
+}
+
+function printList(list){  // recursive function for printing elements inside the lList
+    if(list.next == null) return list.value.toString();
+    return list.value.toString() + printList(list.next)
+}
+
+printList(lList) // 123
+</code></pre>
+<h2 id="rest-parameters">Rest parameters</h2>
+<p>In JS it’s ok to pass more arguments to a function that it needs, the function will simply ignore it.</p>
+<p>To store the passed arguments to an array we can use rest parameters ( …rest ). The rest parameter must come at the end if other parameters exist.</p>
+<pre><code class="language-jsx">function func( a, b, ...c)
+</code></pre>
+<p><strong>arguments</strong> object also contains all arguments passed by index</p>
+<pre><code class="language-jsx">function fun( a, b, c ) {
+    console.log(arguments);
+    console.log(arguments[1]);
+    console.log(arguments.length);
+}
+
+fun(1,2,3,4);
+/* output
+[Arguments] { '0': 1, '1': 2, '2': 3, '3': 4 }
+2
+4
+*/
+</code></pre>
+<p>The downside of the arguments object is that it’s not an array, so we can’t use array methods on it.</p>
+<p>Arrow functions don’t have the <strong>arguments</strong> object, they will take it from an outer function if it exists</p>
+<h2 id="spread-operator">Spread operator 🌟</h2>
+<p>The syntax for the rest operator (…arr) can also spread an iterable object in to a list of values.</p>
+<pre><code class="language-jsx">let str = &quot;hello&quot;
+let arr = [...str]  // [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]
+
+// we can use this operator to pass arrays to functions expecting list of arguments
+arr = [ 1,2,3,4,5 ]
+Math.max(...arr) // 5
+
+// we can also pass multiple iterables, and we can also combine them with non iterables
+arr2 = [ 6,7,8,9 ]
+Math.max(...arr, 34, ...arr2, 1) // 34
+
+// we can use spread operators to merge arrays
+arr2  = [ ...arr2, ...arr1 ]
+</code></pre>
+<p>Unlike the Array.from() method, the spread operator only operates on iterables and not array-likes, so Array.from() is a more universal way to convert stuff into arrays</p>
+<h2 id="closures">Closures</h2>
+<p>Are functions that remember their outer variables and can access them. All JS functions are naturally closures.</p>
+<h3 id="lexical-environment">Lexical Environment</h3>
+<p>A lexical environment is a specification (internal / hidden ) object associated with every function call / block / script. i.e. every running function/ block / script have their own.</p>
+<p>A lexical environment has two parts, <strong>environment record</strong> and <strong>reference to an outer lexical environment.</strong> </p>
+<p>An environment record - holds all the local variables as it’s properties, and the value of <strong>this.</strong> therefore a <strong>variable</strong> is just a property of the internal object- environment record.</p>
+<pre><code class="language-jsx">// A visualization for lexical environments
+Lexical_Environment{
+    Environment_Record: {  /*var1 : smth, ... */ },
+    Outer: /*null in the case of a global lexical env */
+}
+
+let phrase;  // { Environment_Record:{ phrase: undefined }, Outer: null }
+phrase = &quot;hello&quot;; // { Environment_Record:{phrase: &quot;hello&quot;}, Outer: null }
+phrase = &quot;bye&quot; ;  // {Environment_Record:{pharse: &quot;bye&quot;}, Outer: null }
+</code></pre>
+<p><strong>Function declarations</strong> get initialized when the lexical environments that holds them gets created, unlike those with <strong>let</strong> , that get initialized when execution reaches it. That’s why we can call functions before their declaration. All functions on birth get a hidden property <strong>[[Environment]]</strong> which contains a reference to the lexical environment of their creation. functions remember where they were created using this hidden property.</p>
+<pre><code class="language-jsx">// A visulization
+/* Execution starts -&gt; { 
+            Env_record:{
+                    greet: function
+            },
+            Outer: null  } */
+let name = &quot;Jhon&quot;        /* -&gt; {
+             Env_record:{
+                        greet: function,
+                        name: &quot;Jhon&quot;
+                },
+                Outer: null   } */
+function greet(title){  // [[Environment]] -&gt; global lexical environment
+        console.log(&quot;hello &quot; + title + &quot; &quot; + name);
+}
+</code></pre>
+<p><strong>Nested lexical environments :</strong> Let’s call function greet</p>
+<pre><code class="language-jsx">greet(&quot;Mister&quot;) // hello Mister Jhon
+// The execution environment created for this function call is
+/* [[Environment]] -&gt; {
+ Env_record:{
+            title: &quot;Mister&quot;,
+    },
+    Outer: /* A referance to the outer Lexical env with the value for name */
+} 
+*/
+</code></pre>
+<p>When the code wants to access a variable, it’s lexical environment is scanned first, if the variable is not found then the outer lexical environments are scanned progressively until it reaches the global lexical environment. That’s how local variables override outer ones.</p>
+<aside>
+⚠️ **Strict mode alert**                                                                                                                                     If a variable is not found in any of the lexical environments, its an error in strict mode. But if we are not in strict mode, An assignment to an undefined variable creates a new global variable
+
+</aside>
+
+<pre><code class="language-jsx">
+function f(){ b = 5 };
+console.log(b) // 5 in non-strict mode
+// if we are in strict mode -This will throw a ReferanceError
+// if we are not, variable b will get created in the global context
+</code></pre>
+<h2 id="nested-functions">Nested Functions</h2>
+<p>We can use them to organize code</p>
+<pre><code class="language-jsx">function printSquare(n){
+    function square(n) { 
+            return n * n;
+    }
+    console.log(square(n));
+}
+</code></pre>
+<p>We can use them inside constructors to create methods</p>
+<pre><code class="language-jsx">function User(name){
+    this.sayName = function(){
+        console.log(&quot;My name is &quot; + name;
+    }
+}
+</code></pre>
+<p>We can return the functions themselves</p>
+<pre><code class="language-jsx">function makeCounter(){
+        let count = 0;
+        return function(){
+                return count++;
+        }
+}
+let c = makeCounter();
+let d = makeCounter();
+c() // 0
+c() // 1
+d() // 0
+</code></pre>
+<p>When the first c() gets called, this happens</p>
+<pre><code class="language-jsx">c() [[Environment]] -&gt; {  
+    Env_record:{},
+            Outer: -&gt; {
+                     Env_record:{
+                                count: 0,
+                        },
+                        Outer: -&gt; // global lexical env
+                    } 
+                }
+         } 
+</code></pre>
+<p><strong>Code</strong> <strong>Blocks, loops and IIFE</strong></p>
+<p>Lexical environments can exist for any code block. A lexical environment is created when a block runs and contains block local variables</p>
+<pre><code class="language-jsx">if(true){
+    let v = 5;
+}
+v // ReferanceError
+// v can't be accessed from outside of the if blocks lexical environment
+</code></pre>
+<p>Inside loops, every loop will have it’s own lexical environment</p>
+<p>We can use a bare code block {} to isolate variables into a local scope.</p>
+<p>In a web browser all scripts except the ones with type=”module” share the same global area, So if we create a global variable in one script it will become available to the others, this may cause conflicts. But we can isolate each script by putting it inside its own block</p>
+<p>There used to be no block-level lexical environment in JS, so a work around called <strong>IIFE ( immediately invoked function expressions )</strong> was used.</p>
+<pre><code class="language-jsx">(function (){ /* script */ })()
+// other ways
+( function(){ /* script */ }() )
+!function(){ /* script */ )()
++function(){ /* script */ )()
+</code></pre>
+<p>we use the parenthesis to say that the function is created in the context of another expression.</p>
+<h2 id="the-old-var">The old <strong>var</strong></h2>
+<p>variables declared with <strong>var</strong> also have lexical environments that are bound to function scopes.</p>
+<pre><code class="language-jsx">function fun(){
+    let a = 1;
+    var b = 2;
+}
+alert(a) // ReferanceError
+alert(b) // ReferanceError  because vars are also bound to function scopes
+</code></pre>
+<aside>
+📢  But unlike those declared with **let** and **const** they are not bound to block scopes.
+
+</aside>
+
+<pre><code class="language-jsx">{
+    let a = 1;
+    var b = 2;
+}
+
+alert(a) // ReferanceError
+alert(b) // 2     var ignores code blocks
+
+// inside if blocks
+if(true){
+    var test = 4;
+}
+alert(test) // 4
+
+// inside loops
+for( var i = 0; i &lt; 10; i++);
+alert(i) // 9
+</code></pre>
+<aside>
+📢 **var** declarations get hoisted i.e. they get processed as soon as the script ( for global L.E ) or the function they are in gets executed. In other words their declaration gets moved up to the function or the script. Therefore we can use them before they get declared
+
+</aside>
+
+<pre><code class="language-jsx">function greet(){
+    str = &quot;hello&quot;;
+    if(false){ 
+        var str
+    }
+    console.log(str);
+}
+
+greet() // hello
+</code></pre>
+<p>Declarations are hoisted but assignments are not</p>
+<pre><code class="language-jsx">function greet(){
+    console.log(str);
+    var str = &quot;hello&quot;
+}
+greet() // undefined
+</code></pre>
+<h2 id="the-global-object">The global object</h2>
+<p>Provides variables and functions that are available anywhere. Mostly the ones that are built into the language or the environment. </p>
+<p>In the browser it’s name <strong>window</strong>, <strong>global</strong> in node. But <strong>globalThis</strong> has been added to the language as a standardized name for the global object.</p>
+<p>we can access members of the global object directly but it’s good practice to refer to them through the global object. i.e. globalThis.x instead of x</p>
+<p>In-browser unless we’re using modules, variables declared with var and global functions get added to the global object.</p>
+<p>We can use the global object to test for support of modern language features</p>
+<h2 id="the-function-object">The function object</h2>
+<p>Functions in JS are objects. So they have some usable properties of their own</p>
+<pre><code class="language-jsx">function f(){}
+Reflect.ownKeys(f) // [ 'length', 'name', 'arguments', 'caller', 'prototype' ]
+
+Reflect.ownKeys((a, b) =&gt; {}) // [ 'length', 'name' ]
+</code></pre>
+<p>func.<strong>name :</strong>  returns a read only name of the function</p>
+<pre><code class="language-jsx">function sayHi() {}
+sayHi.name // 'sayHi'
+
+let sayHi() = function(){}
+sayHi.name // 'sayHi'
+
+let user = { sayHi(){} }
+user.sayHi.name // 'sayHi'
+</code></pre>
+<p>func.<strong>length :</strong> returns the number of arguments a function accepts</p>
+<pre><code class="language-jsx">function s( a, b, ...c){}
+s.length // 2  rest parameters are not counted 
+</code></pre>
+<p><strong>custom properties</strong></p>
+<p>we can add properties of our own to functions.</p>
+<pre><code class="language-jsx">// lets add a count property which stores the number of calls made to func
+function func(){
+        func.count++;
+        console.log(func.count)
+}
+
+func.count = 0;
+func() // 1
+func() // 2
+func() // 3
+</code></pre>
+<p>Closures can sometimes be replaced with function properties</p>
+<pre><code class="language-jsx">// let's redo the makeCounter function with a custom property
+function makeCounter(){
+        function counter(){
+            return counter.count++;
+        }
+        counter.count = 0 ;
+        reutrn counter;
+}
+
+let c = makeCounter();
+c() // 0
+c() // 1
+c.count = 40;
+c() // 40
+
+// In this case we can modify the counter
+</code></pre>
+<h3 id="named-function-expressions-nfe">Named function expressions ( NFE )</h3>
+<p>NFE is when we give names to the function on the right side of the function in our functional expressions.</p>
+<pre><code class="language-jsx">// normal functional expression
+let func = function() { }
+
+// NFE
+let func = function sayHi(){ } 
+// NFE allows us to reference the function from within
+// the identifier sayHi isn't visible outside the function
+</code></pre>
+<p>We use NFE when we want to reference the function from within the function.</p>
+<pre><code class="language-jsx">let sayHi = function func(ph){
+                                if(ph) console.log(ph);
+                                else func(&quot;hello&quot;);
+}
+
+// We could have done 
+let sayHi = function func(ph){
+                                if(ph) console.log(ph);
+                                else sayHi(ph)
+}
+// but the above code will stop working if we change the value of sayHi
+let anotherFunc = sayHi;
+sayHi = null;
+anotherFunc(&quot;d&quot;) // d
+anotherFunc() // Error sayHi is not a function
+// This happens because the identifier sayHi was taken from the outer L-Env
+
+// This can't be done with function declarations
+</code></pre>
+<aside>
+📢 **Question**                                                                                                                                                     Write a function sum that would work like this:                                                                                     sum(1)(2) == 3; // 1 + 2                                                                                                        sum(1)(2)(3) == 6; // 1 + 2 + 3                                                                                                       sum(5)(-1)(2) == 6
+
+</aside>
+
+<h3 id="new-function-syntax">new Function() syntax</h3>
+<pre><code class="language-jsx">let func = new Function ([arg1, arg2, ...argN], functionBody);
+</code></pre>
+<p>This syntax creates a function with arguments arg1 - argN with functionBody </p>
+<pre><code class="language-jsx">let func = new Function(functionBody) // a function without arguments
+</code></pre>
+<p>Functions created with new Function() have an [[ Environment ]] referencing to the global Lex-Environment. This helps us to hide our local variables from them and to avoid running into problems when using minifiers.</p>
+<p>The arguments can also be given in a comma separated list.</p>
+<pre><code class="language-jsx">new Function(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;alert(a)&quot; );
+new Function(&quot;a,b&quot;, &quot;c&quot;, &quot;alert(a)&quot;);
+new Function(&quot;a,b,c&quot;, &quot;alert(a)&quot; ) ;
+// all work the same
+</code></pre>
+<h2 id="scheduling-settimeout-setinterval">Scheduling : setTimeout &amp; setInterval</h2>
+<p>These methods are not part of the JS specification. But most environments have an internal scheduler that provides these methods.</p>
+<p>setTimeout - causes a function or piece of code to run once after a period of time</p>
+<p>setInterval - causes a function to run regularly with the given interval</p>
+<pre><code class="language-jsx">// setTimeout( func, [delay] , [arg1], [arg2], [argn] );  delay in ms
+function sayHi(name){
+        console.log(`Hi ${name}`
+}
+
+let timerId = setTimeout(sayHi, 9000, &quot;Smith&quot;); 
+// after 9 seconds =&gt; Hi Smith
+// a call to setTimeout returns a timerId we can use this to cancel it
+
+// setInterval(func, [delay], [arg1], [arg2], [argn] );
+let timerId2 = setInterval(sayHi, 2000, &quot;Jack&quot; );
+// Hi Jack will be displayed every 2 seconds
+</code></pre>
+<p><strong>canceling with clearTimeout and clearInterval</strong></p>
+<pre><code class="language-jsx">clearTimeout( timerId )
+clearInterval( timerId2 )
+</code></pre>
+<h3 id="recursive-settimeout">Recursive setTimeout</h3>
+<p>There are two ways of running something regularly, using setInterval and with recursively calling setTimeout.</p>
+<pre><code class="language-jsx">let clock = setTimeout( function f(){
+            console.log(&quot;Tick Tok&quot;);
+            setTimeout( f, 1000);
+        }, 1000 );
+</code></pre>
+<p>This is a more flexible way because we can manipulate the delays.</p>
+<p>The recursive setTimout unlike setInterval guarantees the fixed delay ??</p>
+<p>when a function is passed to setTimeout or setInterval, an internal reference to it is created and saved in the scheduler. This prevents the function from being garbage collected. But it also saved the outer lexical environment of the function, This might take much more memory than the function itself so when we don't need the scheduled function anymore it's better to cancel it. we can do that with clearTimeout and clearInterval</p>
+<h1 id="decorators-and-forwarding-callapply">Decorators and forwarding, call/apply</h1>
+<p>Let's see how cool JS functions can be</p>
+<h3 id="transparent-caching">Transparent caching</h3>
+<p>If we want to cache(remember) the results for different arguments of a CPU intensive function we can create a wrapper function like so.</p>
+<pre><code class="language-javascript">function slow(x){
+    // slow calculations
+    return x;
+}
+
+function cachingDecorator(func){
+    let cache = new Map();
+    return function(x){
+        if(cache.has(x)){
+            return cache.get(x);
+        }
+        let result = func(x);
+        cache.add(x, result;
+        return result;
+    }
+}
+
+let slowFunc = cachingDecorator(slow);
+slow(1) // got computed and cached
+slow(1) // returned from cache
+</code></pre>
+<p>This code will fail if we try to pass Object methods to the wrapper and access properties that belong to the "this" context of that object.</p>
+<pre><code class="language-javascript">let obj = {
+    method(){
+        return 1;
+    }
+    slow(x){
+        // kicka$$ code
+        return x + this.method();
+    }
+}
+
+let obj.slow = cachingDecorator(obj.slow);
+// this will fail because this.method() will be undefined
+</code></pre>
+<p>To overcome this problem we can use function.call() to pass the context as well.
+func.call() allows us to explicitly pass "this"</p>
+<pre><code class="language-javascript">func.call( context, arg1, arg2, ... ); // syntax for .call()
+</code></pre>
+<pre><code class="language-javascript">function greet(){
+    console.log(`Hello my name is ${this.name}`);
+}
+
+let jack = {name: &quot;Jack Taylor&quot;}
+let bob = {name: &quot;Bob Smith&quot;}
+
+greet.call(jack)// Hello my name is Jack Taylor
+greet.call(bob) // Hello my name is Bob Smith
+</code></pre>
+<p>So we can simply fix our wrapper function by changing the assignment to</p>
+<pre><code class="language-javascript">let result = func.call(this, x);
+</code></pre>
+<p>We can also pass the context to a function call using func.<strong>apply( context, args)</strong> where <strong>args</strong> is an <strong>array like</strong>, we can use this when we want to pass an array like containing the multiple arguments for the function we are about to call.</p>
+<pre><code class="language-javascript">let args = [1, &quot;2&quot;, 3];
+
+func.apply(context, args);
+// the same effect can be acheived with
+func.call(context, ...args);
+
+// But func.apply() can get optimized better by engines
+</code></pre>
+<p>func.apply() doesn't accept iterables only array likes.</p>
+<aside>⚠ **read about method borrowing**</aside>
+<aside><a href="http://sinonjs.org/">spy decorator</a></aside>
+
+<aside>❓ **Good Question**
+Create a decorator delay(f, ms) that delays each call of f by ms milliseconds. page# 383
+<pre>
+<code>
+function print(a) { console.log(a) }
+let f3000 = delay(print, 3000);
+f3000("hello") // prints hello after 3 seconds
+</code>
+</pre>
+</aside>
+
+<aside>
+<b>Topics I have to look into again</b>
+<ul>
+<li>Function binding</li>
+<li>Currying and partials</li>
+<li>Arrow functions revisited</li>
+<li><i>Every thing from page 355 onward</i></li>
+</ul>
+</aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+    
+  </body>
+</html>

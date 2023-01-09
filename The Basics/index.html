@@ -1,0 +1,849 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Code%20Quality/">
+      
+      <link rel="icon" href="../assets/images/logo.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+    
+    
+      
+        <title>The Basics - JS Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="JS Notes" class="md-header__button md-logo" aria-label="JS Notes" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JS Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Shifta-Robel/JS_Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Shifta-Robel/JS_Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="JS Notes" class="md-nav__button md-logo" aria-label="JS Notes" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    JS Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Shifta-Robel/JS_Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Shifta-Robel/JS_Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        The Basics
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-7-basic-datatypes" class="md-nav__link">
+    The 7 basic Datatypes
+  </a>
+  
+    <nav class="md-nav" aria-label="The 7 basic Datatypes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-typeof-operator" class="md-nav__link">
+    The typeof operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting" class="md-nav__link">
+    Casting
+  </a>
+  
+    <nav class="md-nav" aria-label="Casting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-conversion-rules" class="md-nav__link">
+    Numeric conversion rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Code%20Quality/" class="md-nav__link">
+        Code Quality
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Types/" class="md-nav__link">
+        Data Types
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced%20working%20with%20functions/" class="md-nav__link">
+        Advanced working with functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Object%20properties%20configuration/" class="md-nav__link">
+        Object properties configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prototypes%20and%20Inheritance/" class="md-nav__link">
+        Prototypal inheritance
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+          Cheat-sheets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cheat-sheets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Cheat-sheets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Array%20methods%20cheat-sheet/" class="md-nav__link">
+        Array methods
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-7-basic-datatypes" class="md-nav__link">
+    The 7 basic Datatypes
+  </a>
+  
+    <nav class="md-nav" aria-label="The 7 basic Datatypes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-typeof-operator" class="md-nav__link">
+    The typeof operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting" class="md-nav__link">
+    Casting
+  </a>
+  
+    <nav class="md-nav" aria-label="Casting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-conversion-rules" class="md-nav__link">
+    Numeric conversion rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="the-basics">The Basics</h1>
+<p>If we give a <code>src</code> attribute inside our &lt;script&gt; tag, and at the same time define some code inside the &lt;script&gt; tags, the script inside will get ignored</p>
+<pre><code class="language-html">&lt;script src=&quot;smt.js&quot;&gt;
+  console.log('hello'); // this code will get ignored
+&lt;/script&gt;
+</code></pre>
+<aside>
+💡 As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+The benefit of a separate file is that the browser will download it and store it in its cache.
+Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once. That reduces traffic and makes pages faster.
+</aside>
+
+<pre><code class="language-jsx">&quot;use strict&quot;;
+// we can do ^ this to switch the engine to modern mode
+// they must be at the top
+// we can also use them in functions
+// several language features like classes and modules enable strict mode by default
+</code></pre>
+<p>we can declare multiple variables in one line</p>
+<pre><code class="language-jsx">let name=&quot;jim&quot;, age=8n, height=45.4n;
+</code></pre>
+<aside>
+    <h4>⚠️ <b>“strict” mode alert</b><br></h4>
+    🔥 We could create variables without declaration merely through assignment, but this is not allowed in strict mode.
+</aside>
+
+<p><strong>Dynamically typed-</strong> there are datatypes but variables are not bound to them.</p>
+<h2 id="the-7-basic-datatypes"><strong>The 7 basic Datatypes</strong></h2>
+<ul>
+<li><strong><em>Number:</em></strong> integers and floating point numbers, plus Special numeric values (Infinity, -Infinity, NaN ).
+  <strong>Infinity</strong> is a result of division by 0. It’s greater than any number.
+  <strong>NaN</strong> is the result of a computational error. If there is a NaN inside a mathematical expression it will propagate through the whole expression.
+  Doing math in JS is safe, i.e. it won’t die with a fatal error, it will result in a NaN in the worst case</li>
+<li><strong><em>Strings:</em></strong> can be surrounded with (“”), (‘’) or backticks(``).</li>
+<li><strong><em>Booleans:</em></strong> either true or false</li>
+<li><strong><em>Null:</em></strong> In JS null is not a reference to a non-existing object, but an object of itself</li>
+<li><strong><em>Undefined:</em></strong> Is also an object of it’s own, and its assigned to variables which have been declared but not assigned, we can also explicitly assign it, but that’s not good practice since that a job for null. null acts like a zero when used in operations. i.e. null - 5 == -5</li>
+<li><strong><em>Objects</em></strong></li>
+<li><strong><em>Symbols:</em></strong> named objects</li>
+</ul>
+<h3 id="the-typeof-operator">The <strong>typeof</strong> operator</h3>
+<pre><code class="language-jsx">&gt; let x = 5
+&gt; typeof x;  // as an operator
+&gt; typeof(x); // as a function
+</code></pre>
+<p>typeof(null) returns “object”, This is an officially recognized error of JS, kept for compatibility. null is not an object but a special type of it’s own .</p>
+<h2 id="casting">Casting</h2>
+<pre><code class="language-jsx">// casting
+&gt; let x;
+&gt; x = String(x)  // To string
+&gt; x = &quot;45&quot; / true  // Numeric conversions happen automatically with operators
+&gt; x = Number(x)  // To Number
+// if one of the operands on + is a string, it will concatenate it
+&gt; &quot;45&quot; + 1 // 451
+&gt; x = Boolean(&quot;0&quot;); // true
+// casting for booleans, values which are intuitively empty(&quot;&quot;, null, undefined, NaN)
+// get evaluated to false. note &quot;0&quot; and &quot; &quot; are evaluated to true
+</code></pre>
+<h3 id="numeric-conversion-rules">Numeric conversion rules</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Becomes..</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>null</td>
+<td>0</td>
+</tr>
+<tr>
+<td>true and false</td>
+<td>1 and 0</td>
+</tr>
+<tr>
+<td>string</td>
+<td>Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. An error gives NaN</td>
+</tr>
+</tbody>
+</table>
+<aside>
+🔥 Tip : We can use the unary + to cast to Number.
+</aside>
+
+<pre><code class="language-jsx">let x = &quot;45&quot;;
+typeof +x; // Number
++true; // 1
+</code></pre>
+<pre><code class="language-jsx">// Weird stuff
+4 + 5 + &quot;px&quot;; // 9px
+&quot;px&quot; + 4 + 5; // px45
+// operations run from left to right
+</code></pre>
+<p>Unary operators have higher precedence than their binary counterparts.</p>
+<p>For more on operator precedence go to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence</a></p>
+<p>Chained assignments are evaluated from right to left</p>
+<p>The assignment operator returns the value that it just assigned.</p>
+<pre><code class="language-jsx">let a = 5;
+5 + (a = a + 5); // returns 15
+</code></pre>
+<h3>
+📢 The comma operator
+</h3>
+
+<pre><code class="language-jsx">// Weird stuff
+let a = 0;
+let b = &quot;0&quot;;
+Boolean(a) // false
+Boolean(b) // true
+a == b // true
+// This happened because the == operator casts b to 0, and Boolean(b) returns true
+</code></pre>
+<p><strong>Strict equality ( === )</strong></p>
+<p>Strict equality operator, checks for equality without type conversion</p>
+<pre><code class="language-jsx">null &gt; 0; // false
+null &gt;= 0; // true
+null == 0; // false  since equality doesn't cast null, like comparisions do
+
+null == undefined; // true
+null === undefined; // false
+</code></pre>
+<aside>
+⚠️ Inside a switch cases are matched with strict equality ===
+
+</aside>
+
+<pre><code class="language-jsx">switch (&quot;3&quot;) {
+  case 3: // this will not become true since their types are different
+}
+</code></pre>
+<p><strong>The NOT ! operator</strong></p>
+<p>! converts to a Boolean and returns its inverse</p>
+<aside>
+🛠 Double NOT ( !! ) is used to cast to Boolean.  !!(”0”) // true
+
+</aside>
+
+<aside>
+    📢 <b>The comma operator</b>
+</aside>
+
+<pre><code class="language-jsx">// The comma operator evaluates all expressions and returns the last one
+    let a = ( 2 + 4, 3 + 8); // a will equal 11
+// the comma has lower precedence than even the =
+for (a = 1, b = 3, c = a * b; a &lt; 10; a++) { ... }
+</code></pre>
+<aside>
+    🛠 <b>The very special (OR ||) and (AND &&) operators</b>
+
+</aside>
+
+<p>OR evaluates from left to right and returns the first truthy value, if none it returns the last \
+AND also evaluates from left to right and returns the first faulty value, if none it returns the last</p>
+<pre><code class="language-jsx">result = value1 || value2 || value3;
+// result will be the first truthy value, if none it will be value3
+// &amp;&amp; has higher precedence than ||
+
+let v1 = null;
+let v2 = &quot;&quot;;
+
+let result = v1 || v2 || &quot;no-name&quot;; // no-name
+let result = v1 &amp;&amp; v2 &amp;&amp; &quot;no-name&quot;; // null
+
+/* we can also use OR as an if statement due to them being short-circuit*/
+true || expression; // won't get evaluated
+false || expression; // gets evaluated
+true &amp;&amp; expression; // gets evaluated
+false &amp;&amp; expression; // won't get evaluated
+</code></pre>
+<h2 id="functions">Functions</h2>
+<pre><code class="language-jsx">function smth(){ console.log(&quot;smth&quot;) } // function declaration
+let smth = function(){ } // function expression
+let smth = () =&gt; {} // arrow functions,more concise than function expressions
+
+// we can specify parameters like
+
+function sayhello( person, message ) {
+    console.log( person + &quot; : &quot; + message )
+}
+
+// to specify a default value
+function sayHello( person, message = &quot;no message&quot;) {}
+
+// we can assign the return of another function or expression as the default
+function sayHello ( person = expression , message = anotherFunction() )
+/* we can use the fact that the default expression or function call only gets executed
+     if the function is missing an argument */
+// another way we can assign default values is with
+function sayHello(person, message){
+    person = person || &quot;no-name&quot;;
+    message = message || &quot;no-message&quot;;
+}
+
+/* Functions can be copied, passed to other functions in which case they are called
+ callbacks ... */
+
+</code></pre>
+<aside>
+⚠️ In JavaScript, a default parameter is evaluated every time the function is called without the
+respective parameter. In the example above, anotherFunction() is called every time
+showMessage() is called without the text parameter. This is in contrast to some other
+languages like Python, where any default parameters are evaluated only once during the
+initial interpretation.
+
+</aside>
+
+<p>An empty or no-return returns undefined</p>
+<pre><code class="language-jsx">function a() {
+  return;
+} // a() -&gt; undefined
+function b() {} // b() -&gt; undefined
+</code></pre>
+<p>http://127.0.0.1:8000/
+Modal function - pause the code execution until they finish eg. alert() …</p>
+<aside>
+⚠️  <b>function declaration VS Function expression:</b> 
+Functions initiated with function expressions can only be used after they have been declared, unlike those with function declarations. In other words. <b>A Function Expression is created when the execution reaches it and is usable only from that moment.</b>
+
+</aside>
+
+<aside>
+    <h4>⚠️ “strict” mode alert</h4>
+In strict mode functions will only be visible inside the block they were defined in.
+</aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.expand"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+    
+  </body>
+</html>
