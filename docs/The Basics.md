@@ -1,10 +1,10 @@
-# The Basics 
+# The Basics
 
-If we give a ``src`` attribute inside our &lt;script&gt; tag, and at the same time define some code inside the &lt;script&gt; tags, the script inside will get ignored
+If we give a `src` attribute inside our &lt;script&gt; tag, and at the same time define some code inside the &lt;script&gt; tags, the script inside will get ignored
 
 ```html
 <script src="smt.js">
-		console.log('hello'); // this code will get ignored
+  console.log('hello'); // this code will get ignored
 </script>
 ```
 
@@ -33,24 +33,20 @@ let name="jim", age=8n, height=45.4n;
 	🔥 We could create variables without declaration merely through assignment, but this is not allowed in strict mode.
 </aside>
 
-**Dynamically typed-** there are datatypes but variables are not bound to them. 
+**Dynamically typed-** there are datatypes but variables are not bound to them.
 
 ## **The 7 basic Datatypes**
 
-- ***Number:***  integers and floating point numbers, plus Special numeric values (Infinity, -Infinity, NaN ).
-    
-    **Infinity** is a result of division by 0. It’s greater than any number. 
-    
-    **NaN** is the result of a computational error. If there is a NaN inside a mathematical expression it will propagate through the whole expression.
-    
-     Doing math in JS is safe, i.e. it won’t die with a fatal error, it will result in a NaN in the worst case
-    
-- ***Strings:*** can be surrounded with (“”), (‘’) or backticks(``).
-- ***Booleans:*** either true or false
-- ***Null:*** In JS null is not a reference to a non-existing object, but an object of itself
-- ***Undefined:*** Is also an object of it’s own, and its assigned to variables which have been declared but not assigned, we can also explicitly assign it, but that’s not good practice since that a job for null. null acts like a zero when used in operations. i.e. null - 5 == -5
-- ***Objects***
-- ***Symbols:*** named objects
+- **_Number:_** integers and floating point numbers, plus Special numeric values (Infinity, -Infinity, NaN ).
+  **Infinity** is a result of division by 0. It’s greater than any number.
+  **NaN** is the result of a computational error. If there is a NaN inside a mathematical expression it will propagate through the whole expression.
+  Doing math in JS is safe, i.e. it won’t die with a fatal error, it will result in a NaN in the worst case
+- **_Strings:_** can be surrounded with (“”), (‘’) or backticks(``).
+- **_Booleans:_** either true or false
+- **_Null:_** In JS null is not a reference to a non-existing object, but an object of itself
+- **_Undefined:_** Is also an object of it’s own, and its assigned to variables which have been declared but not assigned, we can also explicitly assign it, but that’s not good practice since that a job for null. null acts like a zero when used in operations. i.e. null - 5 == -5
+- **_Objects_**
+- **_Symbols:_** named objects
 
 ### The **typeof** operator
 
@@ -79,12 +75,12 @@ typeof(null) returns “object”, This is an officially recognized error of JS,
 
 ### Numeric conversion rules
 
-| Value | Becomes.. |
-| --- | --- |
-| undefined | NaN |
-| null | 0 |
-| true and false | 1 and 0 |
-| string |  Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. An error gives NaN |
+| Value          | Becomes..                                                                                                                                                              |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| undefined      | NaN                                                                                                                                                                    |
+| null           | 0                                                                                                                                                                      |
+| true and false | 1 and 0                                                                                                                                                                |
+| string         | Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. An error gives NaN |
 
 <aside>
 🔥 Tip : We can use the unary + to cast to Number.
@@ -93,29 +89,32 @@ typeof(null) returns “object”, This is an officially recognized error of JS,
 ```jsx
 let x = "45";
 typeof +x; // Number
-+true // 1
++true; // 1
 ```
 
 ```jsx
 // Weird stuff
-4 + 5 + "px"  // 9px
-"px" + 4 + 5  // px45
-// operations run from left to rigth
+4 + 5 + "px"; // 9px
+"px" + 4 + 5; // px45
+// operations run from left to right
 ```
 
 Unary operators have higher precedence than their binary counterparts.
 
-For more on operator precedence > [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+For more on operator precedence go to [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 
 Chained assignments are evaluated from right to left
 
-The assignment operator returns the value that it just assigned. 
+The assignment operator returns the value that it just assigned.
 
 ```jsx
-let a = 5; 
+let a = 5;
 5 + (a = a + 5); // returns 15
 ```
 
+<h3>
+📢 The comma operator
+</h3>
 ```jsx
 // Weird stuff
 let a = 0;
@@ -131,12 +130,12 @@ a == b // true
 Strict equality operator, checks for equality without type conversion
 
 ```jsx
-null > 0 // false
-null >= 0 // true
-null == 0 // false  since equality doesn't cast null, like comparisions do
+null > 0; // false
+null >= 0; // true
+null == 0; // false  since equality doesn't cast null, like comparisions do
 
-null == undefined // true
-null === undefined // false
+null == undefined; // true
+null === undefined; // false
 ```
 
 <aside>
@@ -145,23 +144,19 @@ null === undefined // false
 </aside>
 
 ```jsx
-switch("3"){
-	case 3: // this will not become true since their types are different
+switch ("3") {
+  case 3: // this will not become true since their types are different
 }
 ```
-
 
 **The NOT ! operator**
 
 ! converts to a Boolean and returns its inverse
 
- 
-
 <aside>
 🛠 Double NOT ( !! ) is used to cast to Boolean.  !!(”0”) // true
 
 </aside>
-
 
 <aside>
 	📢 <b>The comma operator</b>
@@ -174,7 +169,6 @@ switch("3"){
 for (a = 1, b = 3, c = a * b; a < 10; a++) { ... }
 ```
 
-
 <aside>
 	🛠 <b>The very special (OR ||) and (AND &&) operators</b>
 
@@ -184,7 +178,7 @@ OR evaluates from left to right and returns the first truthy value, if none it r
 AND also evaluates from left to right and returns the first faulty value, if none it returns the last
 
 ```jsx
-result = value1 || value2 || value3
+result = value1 || value2 || value3;
 // result will be the first truthy value, if none it will be value3
 // && has higher precedence than ||
 
@@ -192,7 +186,7 @@ let v1 = null;
 let v2 = "";
 
 let result = v1 || v2 || "no-name"; // no-name
-let result = v1 && v2 && "no-name"; // null 
+let result = v1 && v2 && "no-name"; // null
 
 /* we can also use OR as an if statement due to them being short-circuit*/
 true || expression; // won't get evaluated
@@ -204,7 +198,7 @@ false && expression; // won't get evaluated
 ## Functions
 
 ```jsx
-function smth(){ console.log("smth") } // function declaration 
+function smth(){ console.log("smth") } // function declaration
 let smth = function(){ } // function expression
 let smth = () => {} // arrow functions,more concise than function expressions
 
@@ -221,10 +215,10 @@ function sayHello( person, message = "no message") {}
 function sayHello ( person = expression , message = anotherFunction() )
 /* we can use the fact that the default expression or function call only gets executed
 	 if the function is missing an argument */
-// another way we can assign default values is with 
+// another way we can assign default values is with
 function sayHello(person, message){
-person = person || "no-name";
-message = message || "no-message";
+	person = person || "no-name";
+	message = message || "no-message";
 }
 
 /* Functions can be copied, passed to other functions in which case they are called
@@ -244,14 +238,17 @@ initial interpretation.
 An empty or no-return returns undefined
 
 ```jsx
-function a(){ return };  // a() -> undefined
-function b(){}; // b() -> undefined
+function a() {
+  return;
+} // a() -> undefined
+function b() {} // b() -> undefined
 ```
 
-Modal function - are functions that restricts user interaction i.e. pause the code execution until an action has been taken. eg. alert()\
+http://127.0.0.1:8000/
+Modal function - pause the code execution until they finish eg. alert() …
 
 <aside>
-	⚠️ <b>Function declaration VS Function expression:</b> 
+⚠️  <b>function declaration VS Function expression:</b> 
 Functions initiated with function expressions can only be used after they have been declared, unlike those with function declarations. In other words. <b>A Function Expression is created when the execution reaches it and is usable only from that moment.</b>
 
 </aside>
